@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@custom-variant light (&:where(.light, .light *));
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  --color-bg: #0b1220;
+  --color-bg-soft: #101a2c;
+  --color-panel: #141f35;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-text: #e7ecf5;
+  --color-muted: #8b97ae;
+  --color-flutter: #54c5f8;
+  --color-kotlin: #a66bff;
+  --color-accent: #54c5f8;
+  --color-code-text: #a9b6cc;
+  --color-code-comment: #5c6885;
+  --color-success: #7fe3a6;
+  --color-tag-bg: rgba(84, 197, 248, 0.1);
+  --color-btn-text: #04101f;
+}
+
+.light {
+  --color-bg: #f6f8fc;
+  --color-bg-soft: #ecf1f9;
+  --color-panel: #ffffff;
+  --color-line: rgba(16, 26, 44, 0.1);
+  --color-text: #101a2c;
+  --color-muted: #5c6679;
+  --color-flutter: #0b8fcf;
+  --color-kotlin: #7a3fe0;
+  --color-accent: #0b8fcf;
+  --color-code-text: #3a4458;
+  --color-code-comment: #94a0b8;
+  --color-tag-bg: rgba(11, 143, 207, 0.08);
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-flutter), var(--color-kotlin));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-flutter), var(--color-kotlin));
+  color: var(--color-btn-text);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 13px 24px;
+  border-radius: 8px;
+  transition: opacity 0.15s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-line);
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 13px 24px;
+  border-radius: 8px;
+  transition: border-color 0.15s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent);
+}
+
+.hire-btn {
+  background: linear-gradient(135deg, var(--color-flutter), var(--color-kotlin));
+  color: var(--color-btn-text);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 9px 18px;
+  border-radius: 7px;
+}
