@@ -88,7 +88,7 @@ export const projects = [
   {
     id: 'engineering-dictionary',
     title: 'Engineering Dictionary',
-    coverImage: '/portfolio/public/projects/engineering-dictionary/cover.png',
+    coverImage: '/portfolio/projects/engineering-dictionary/cover.png',
     description:
       'A bilingual (English–Myanmar) engineering glossary app covering civil, electrical, and IT terms, with fast search and favorites.',
     summary:
