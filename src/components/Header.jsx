@@ -80,7 +80,10 @@ export default function Header({ isLight, onToggleTheme, menuOpen, onToggleMenu,
       .map((id) => document.getElementById(id))
       .filter(Boolean)
 
-    if (sections.length === 0) return
+    if (sections.length === 0) {
+      setActiveSection(null)
+      return
+    }
 
     // Distance from the top of the viewport that counts as "reached" —
     // roughly the sticky header height plus a little breathing room.
@@ -125,7 +128,7 @@ export default function Header({ isLight, onToggleTheme, menuOpen, onToggleMenu,
       window.removeEventListener('scroll', onScroll)
       window.removeEventListener('resize', onScroll)
     }
-  }, [])
+  }, [location.pathname])
 
   const isLinkActive = (href) => {
     const id = href.replace('/', '')
