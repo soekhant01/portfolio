@@ -8,23 +8,47 @@ export default function Layout({ isLight, onToggleTheme, menuOpen, onToggleMenu,
   const location = useLocation()
   const onNavigate = useSectionNavigate()
 
-  useEffect(() => {
-    if (location.pathname !== '/' || !location.hash) return
+  // useEffect(() => {
+  //   if (location.pathname !== '/' || !location.hash) return
 
-    const target = document.querySelector(location.hash)
+  //   const target = document.querySelector(location.hash)
+  //   if (!target) return
+
+  //   requestAnimationFrame(() => {
+  //     const top = target.getBoundingClientRect().top + window.pageYOffset - 90
+  //     window.scrollTo({ top, behavior: 'smooth' })
+  //   })
+  // }, [location.pathname, location.hash])
+
+  // useEffect(() => {
+  //   if (location.pathname !== '/') {
+  //     window.scrollTo({ top: 0 })
+  //   }
+  // }, [location.pathname])
+  const SECTION_PATHS = ['/', '/about', '/skills', '/projects', '/contact']
+
+useEffect(() => {
+  if (!SECTION_PATHS.includes(location.pathname)) {
+    window.scrollTo({ top: 0 })
+    return
+  }
+
+  if (location.pathname === '/' && !location.hash) {
+    window.scrollTo({ top: 0 })
+    return
+  }
+
+  const id = location.pathname === '/'
+    ? location.hash.slice(1)
+    : location.pathname.slice(1)
+
+  requestAnimationFrame(() => {
+    const target = document.getElementById(id)
     if (!target) return
-
-    requestAnimationFrame(() => {
-      const top = target.getBoundingClientRect().top + window.pageYOffset - 90
-      window.scrollTo({ top, behavior: 'smooth' })
-    })
-  }, [location.pathname, location.hash])
-
-  useEffect(() => {
-    if (location.pathname !== '/') {
-      window.scrollTo({ top: 0 })
-    }
-  }, [location.pathname])
+    const top = target.getBoundingClientRect().top + window.pageYOffset - 90
+    window.scrollTo({ top, behavior: 'smooth' })
+  })
+}, [location.pathname, location.hash])
 
   return (
     <>

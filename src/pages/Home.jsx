@@ -8,6 +8,8 @@ import { useSectionNavigate } from '../hooks/useSectionNavigate'
 export default function Home() {
   const onNavigate = useSectionNavigate()
 
+  
+
   return (
     <>
       <Hero onNavigate={onNavigate} />

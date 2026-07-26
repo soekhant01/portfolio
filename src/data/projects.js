@@ -1,10 +1,3 @@
-import ht1 from '/projects/habit-tracker/HT_1.png'
-import ht2 from '/projects/habit-tracker/HT_2.png'
-import ht3 from '/projects/habit-tracker/HT_3.png'
-
-import ed1 from '/projects/engineering-dictionary/ED_1.png'
-import ed2 from '/projects/engineering-dictionary/ED_2.png'
-import ed3 from '/projects/engineering-dictionary/ED_3.png'
 export const projects = [
   {
     id: 'fitpulse',
@@ -49,7 +42,7 @@ export const projects = [
   {
   id: 'habit-tracker',
   title: 'HabitTracker',
-  coverImage: '/projects/habit-tracker/habit.png',
+  coverImage: '/portfolio/projects/habit-tracker/habit.png',
   description:
     'A minimalist habit-tracking app with daily streaks, completion stats, and a clean dark UI. Built with Flutter using an AI-assisted "vibe coding" workflow.',
   summary:
@@ -86,12 +79,16 @@ export const projects = [
     },
   ],
   techStack: ['Flutter', 'Dart', 'Stitch', 'Antigravity', 'MCP'],
-  screenshots: [ht1,ht2,ht3],
+  screenshots: [
+    '/portfolio/projects/habit-tracker/HT_1.png',
+    '/portfolio/projects/habit-tracker/HT_2.png',
+    '/portfolio/projects/habit-tracker/HT_3.png',
+  ],
 },
   {
     id: 'engineering-dictionary',
     title: 'Engineering Dictionary',
-    coverImage: '/projects/engineering-dictionary/cover.png',
+    coverImage: '/portfolio/public/projects/engineering-dictionary/cover.png',
     description:
       'A bilingual (English–Myanmar) engineering glossary app covering civil, electrical, and IT terms, with fast search and favorites.',
     summary:
@@ -128,9 +125,9 @@ export const projects = [
     ],
     techStack: ['Flutter', 'Dart', 'SQLite', 'Provider'],
     screenshots: [
-      ed1,
-      ed2,
-      ed3
+      '/portfolio/projects/engineering-dictionary/ED_1.png',
+      '/portfolio/projects/engineering-dictionary/ED_2.png',
+      '/portfolio/projects/engineering-dictionary/ED_3.png',
     ],
   },
 ]

@@ -45,18 +45,27 @@ function CloseIcon() {
 }
 
 function NavLink({ href, children, onNavigate, onAfterClick, isActive, className = '', activeClassName = '' }) {
+  const handleClick = (e) => {
+    const id = href.replace('/', '')
+    const el = document.getElementById(id)
+
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    onNavigate?.(e, href)
+    onAfterClick?.()
+  }
+
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       aria-current={isActive ? 'page' : undefined}
       className={`${className} ${isActive ? activeClassName : ''}`.trim()}
-      onClick={(e) => {
-        onNavigate(e, href)
-        onAfterClick?.()
-      }}
+      onClick={handleClick}
     >
       {children}
-    </a>
+    </Link>
   )
 }
 
@@ -119,7 +128,7 @@ export default function Header({ isLight, onToggleTheme, menuOpen, onToggleMenu,
   }, [])
 
   const isLinkActive = (href) => {
-    const id = href.replace('#', '')
+    const id = href.replace('/', '')
     return activeSection ? activeSection === id : location.hash === href
   }
 
@@ -147,10 +156,10 @@ export default function Header({ isLight, onToggleTheme, menuOpen, onToggleMenu,
         </Link>
 
         <div className="hidden gap-8 min-[721px]:flex">
-          <NavLink href="#about" onNavigate={onNavigate} isActive={isLinkActive('#about')} className={desktopLink} activeClassName={desktopActive}>About</NavLink>
-          <NavLink href="#skills" onNavigate={onNavigate} isActive={isLinkActive('#skills')} className={desktopLink} activeClassName={desktopActive}>Skills</NavLink>
-          <NavLink href="#projects" onNavigate={onNavigate} isActive={isLinkActive('#projects')} className={desktopLink} activeClassName={desktopActive}>Projects</NavLink>
-          <NavLink href="#contact" onNavigate={onNavigate} isActive={isLinkActive('#contact')} className={desktopLink} activeClassName={desktopActive}>Contact</NavLink>
+          <NavLink href="/about" onNavigate={onNavigate} isActive={isLinkActive('/about')} className={desktopLink} activeClassName={desktopActive}>About</NavLink>
+          <NavLink href="/skills" onNavigate={onNavigate} isActive={isLinkActive('/skills')} className={desktopLink} activeClassName={desktopActive}>Skills</NavLink>
+          <NavLink href="/projects" onNavigate={onNavigate} isActive={isLinkActive('/projects')} className={desktopLink} activeClassName={desktopActive}>Projects</NavLink>
+          <NavLink href="/contact" onNavigate={onNavigate} isActive={isLinkActive('/contact')} className={desktopLink} activeClassName={desktopActive}>Contact</NavLink>
         </div>
 
         <div className="flex items-center">
@@ -163,7 +172,7 @@ export default function Header({ isLight, onToggleTheme, menuOpen, onToggleMenu,
             {isLight ? <SunIcon /> : <MoonIcon />}
           </button>
 
-          <NavLink href="#contact" onNavigate={onNavigate} className="hire-btn max-[720px]:hidden">
+          <NavLink href="/contact" onNavigate={onNavigate} className="hire-btn max-[720px]:hidden">
             Hire Me
           </NavLink>
 
@@ -180,10 +189,10 @@ export default function Header({ isLight, onToggleTheme, menuOpen, onToggleMenu,
 
       {menuOpen && (
         <div className="flex flex-col gap-1 border-b border-line bg-bg-soft px-7 pb-[26px] pt-[18px] min-[721px]:hidden">
-          <NavLink href="#about" onNavigate={onNavigate} onAfterClick={onCloseMenu} isActive={isLinkActive('#about')} className={mobileLink} activeClassName={mobileActive}>About</NavLink>
-          <NavLink href="#skills" onNavigate={onNavigate} onAfterClick={onCloseMenu} isActive={isLinkActive('#skills')} className={mobileLink} activeClassName={mobileActive}>Skills</NavLink>
-          <NavLink href="#projects" onNavigate={onNavigate} onAfterClick={onCloseMenu} isActive={isLinkActive('#projects')} className={mobileLink} activeClassName={mobileActive}>Projects</NavLink>
-          <NavLink href="#contact" onNavigate={onNavigate} onAfterClick={onCloseMenu} isActive={isLinkActive('#contact')} className={mobileLink} activeClassName={mobileActive}>Contact</NavLink>
+          <NavLink href="/about" onNavigate={onNavigate} onAfterClick={onCloseMenu} isActive={isLinkActive('/about')} className={mobileLink} activeClassName={mobileActive}>About</NavLink>
+          <NavLink href="/skills" onNavigate={onNavigate} onAfterClick={onCloseMenu} isActive={isLinkActive('/skills')} className={mobileLink} activeClassName={mobileActive}>Skills</NavLink>
+          <NavLink href="/projects" onNavigate={onNavigate} onAfterClick={onCloseMenu} isActive={isLinkActive('projects')} className={mobileLink} activeClassName={mobileActive}>Projects</NavLink>
+          <NavLink href="/contact" onNavigate={onNavigate} onAfterClick={onCloseMenu} isActive={isLinkActive('/contact')} className={mobileLink} activeClassName={mobileActive}>Contact</NavLink>
         </div>
       )}
     </header>
