@@ -22,7 +22,7 @@ export default function Contact() {
               <a href="mailto:soekhant.dev@gmail.com" className="btn-primary">
                 soekhant.dev@gmail.com
               </a>
-              <a href="/Soe_Khant_Resume.pdf" download className="btn-secondary">
+              <a href="/portfolio/Soe_Khant_Resume.pdf" download className="btn-secondary">
                 Download Resume
               </a>
             </div>
