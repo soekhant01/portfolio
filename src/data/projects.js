@@ -1,44 +1,57 @@
 export const projects = [
   {
-    id: 'fitpulse',
-    title: 'FitPulse',
-    description:
-      'A comprehensive fitness tracking app with workout plans, progress analytics, and nutrition logging. Built with Flutter and Firebase.',
-    summary:
-      'FitPulse is a mobile fitness companion designed to help users stay consistent with their health goals. The app combines structured workout plans, real-time progress tracking, and nutrition logging in a clean, motivating interface.',
-    tags: ['Flutter', 'Firebase', 'Provider'],
-    thumbClass: 'from-[#1a3a4a] to-bg',
-    role: 'Mobile Developer',
-    timeline: '2025',
-    status: 'Completed',
-    links: {
-      github: null,
-      demo: null,
-      store: null,
-    },
-    highlights: [
-      'Personalized workout plans with progress tracking',
-      'Nutrition logging with daily calorie summaries',
-      'Firebase authentication and cloud sync',
-      'Offline-first data layer with local caching',
-    ],
-    features: [
-      {
-        title: 'Workout Engine',
-        description: 'Custom routines with timers, rest intervals, and exercise history.',
-      },
-      {
-        title: 'Progress Analytics',
-        description: 'Weekly charts for weight, reps, and consistency streaks.',
-      },
-      {
-        title: 'Nutrition Tracker',
-        description: 'Meal logging with macro breakdowns and daily goals.',
-      },
-    ],
-    techStack: ['Flutter', 'Dart', 'Firebase Auth', 'Cloud Firestore', 'Provider', 'Figma'],
-    screenshots: [],
+  id: 'lets-buy',
+  title: "Let's Buy",
+  coverImage: '/portfolio/projects/lets-buy/buy-now.png',
+  description:
+    'A native Android e-commerce app with product browsing, cart management, and checkout. Built with Kotlin, Jetpack Compose, and Firebase.',
+  summary:
+    "Let's Buy is a full-featured shopping app built natively for Android. It follows an MVVM architecture with a Compose-based UI, letting users browse categorized products, manage a cart, checkout with a live order summary, and maintain a personal profile — all backed by Firebase.",
+  tags: ['Kotlin', 'Jetpack Compose', 'Firebase'],
+  thumbClass: 'from-[#2a3a5a] to-bg',
+  role: 'Android Developer',
+  timeline: '2026',
+  status: 'Actively Maintained',
+  links: {
+    github: "https://github.com/soekhant01/LetsBuy",
+    demo: null,
+    store: null,
   },
+  highlights: [
+    'Category-based product browsing with a home feed of latest items',
+    'Favorites, cart, and checkout flow with discount and tax breakdown',
+    'Firebase authentication with persistent user sessions via SharedPreferences',
+    'MVVM Ui Base architecture, reactive Compose UI',
+  ],
+  features: [
+    {
+      title: 'Product Catalog',
+      description: 'Browsable categories, carousel banners, and a latest-items feed on the home screen.',
+    },
+    {
+      title: 'Cart & Checkout',
+      description: 'Quantity controls, item removal, and a checkout summary with subtotal, discount, and tax.',
+    },
+    {
+      title: 'Favorites',
+      description: 'Save products for later and quickly add them back to the cart.',
+    },
+    {
+      title: 'User Profile',
+      description: 'Manage delivery address, view account details, toggle dark mode, and sign out or delete account.',
+    },
+  ],
+  techStack: ['Kotlin', 'Jetpack Compose', 'Firebase Auth', 'Cloud Firestore', 'SharedPreferences', 'MVVM'],
+  screenshots: [
+    '/portfolio/projects/lets-buy/LB_1.png',
+    '/portfolio/projects/lets-buy/LB_2.png',
+    '/portfolio/projects/lets-buy/LB_3.png',
+    '/portfolio/projects/lets-buy/LB_4.png',
+    '/portfolio/projects/lets-buy/LB_5.png',
+    '/portfolio/projects/lets-buy/LB_6.png',
+    '/portfolio/projects/lets-buy/LB_7.png',
+  ],
+},
   {
   id: 'habit-tracker',
   title: 'HabitTracker',
@@ -78,11 +91,13 @@ export const projects = [
       description: 'Success rate, best streak, and weekly/monthly activity charts at a glance.',
     },
   ],
-  techStack: ['Flutter', 'Dart', 'Stitch', 'Antigravity', 'MCP'],
+  techStack: ['Flutter', 'Dart','Sqlite','Provider', 'Stitch', 'Antigravity', 'MCP'],
   screenshots: [
     '/portfolio/projects/habit-tracker/HT_1.png',
     '/portfolio/projects/habit-tracker/HT_2.png',
     '/portfolio/projects/habit-tracker/HT_3.png',
+    '/portfolio/projects/habit-tracker/HT_4.png',
+    '/portfolio/projects/habit-tracker/HT_5.png',
   ],
 },
   {
@@ -96,7 +111,7 @@ export const projects = [
     tags: ['Flutter', 'Dart', 'Local Database'],
     thumbClass: 'from-[#2a2a2a] to-bg',
     role: 'Mobile Developer',
-    timeline: '2026',
+    timeline: 'Early 2026',
     status: 'Completed',
     links: {
       github: "https://github.com/soekhant01/Engineering-Dictionary-App", // paste your repo link here
