@@ -52,6 +52,65 @@ export const projects = [
     '/portfolio/projects/lets-buy/LB_7.png',
   ],
 },
+
+{
+  id: 'drms',
+  title: "Disaster Relief Management System",
+  coverImage: '/portfolio/projects/drms/disaster-management.png',
+  description:
+    'A Field Staff Android app for an NGO disaster relief system — register beneficiaries, record relief distributions, and view assigned tasks. Built with Kotlin, Jetpack Compose, and Retrofit.',
+  summary:
+    "Disaster Relief Management System (DRMS) is an internal platform built for an NGO to coordinate disaster response — from beneficiary registration to relief distribution and reporting. As part of a 6-person university team project, I was responsible for the Field Staff role and built its native Android app: field workers can register affected households, record relief distributions against them, track distribution history, and view distribution tasks assigned to them by the Project Officer.",
+  tags: ['Kotlin', 'Jetpack Compose'],
+  thumbClass: 'from-[#2a3a5a] to-bg',
+  role: 'Field Staff App Developer',
+  timeline: '2025 - 2026',
+  status: 'Completed',
+  links: {
+    github: 'https://github.com/soekhant01/DRMS-FieldStaff',
+    demo: null,
+    store: null,
+  },
+  highlights: [
+    'Beneficiary registration with duplicate-contact prevention',
+    'Relief distribution recording tied to registered beneficiaries',
+    'Distribution history with edit and delete support',
+    'View-only screen for daily distribution tasks assigned by the Project Officer',
+  ],
+  features: [
+    {
+      title: 'Beneficiary Registration',
+      description: 'Register, view, update, and delete affected households with name, father\'s name, and phone number.',
+    },
+    {
+      title: 'Record Distribution',
+      description: 'Log relief distributions per beneficiary, capturing household size, dependents, and items distributed.',
+    },
+    {
+      title: 'Distribution History',
+      description: 'Browse past distribution records with edit and delete actions and confirmation dialogs.',
+    },
+    {
+      title: 'Assigned Distribution',
+      description: 'View-only list of daily distribution tasks assigned to the logged-in field staff.',
+    },
+  ],
+  techStack: ['Kotlin', 'Jetpack Compose', 'Retrofit', 'MVVM'],
+  screenshots: [
+    '/portfolio/projects/drms/drms-1.png',
+    '/portfolio/projects/drms/drms-2.png',
+    '/portfolio/projects/drms/drms-3.png',
+    '/portfolio/projects/drms/drms-4.png',
+    '/portfolio/projects/drms/drms-5.png',
+    '/portfolio/projects/drms/drms-6.png',
+    '/portfolio/projects/drms/drms-7.png',
+    '/portfolio/projects/drms/drms-8.png',
+    '/portfolio/projects/drms/drms-9.png',
+
+  ],
+},
+
+
   {
   id: 'habit-tracker',
   title: 'HabitTracker',
@@ -111,7 +170,7 @@ export const projects = [
     tags: ['Flutter', 'Dart', 'Local Database'],
     thumbClass: 'from-[#2a2a2a] to-bg',
     role: 'Mobile Developer',
-    timeline: 'Early 2026',
+    timeline: 'Mid 2026',
     status: 'Completed',
     links: {
       github: "https://github.com/soekhant01/Engineering-Dictionary-App", // paste your repo link here
@@ -145,6 +204,64 @@ export const projects = [
       '/portfolio/projects/engineering-dictionary/ED_3.png',
     ],
   },
+
+
+  {
+  id: 'book-lab',
+  title: 'Book Lab',
+  coverImage: '/portfolio/projects/book-lab/book.png',
+  description:
+    'A modern book management app to organize books and authors, featuring favorites, local storage, and clean UI with light/dark themes.',
+  summary:
+    'Book Lab is a Flutter mobile application designed to help users manage their personal book collection and author records. Users can add books and authors, attach images, write descriptions, and mark favorites for quick access. The app uses a local database for offline-first functionality and includes a polished UI with dark mode support and smooth interactions.',
+  tags: ['Flutter', 'Dart', 'Local Database'],
+  thumbClass: 'from-[#6a11cb] to-[#ff3d6e]',
+  role: 'Mobile Developer',
+  timeline: '2026',
+  status: 'Completed',
+  links: {
+    github: "https://github.com/soekhant01/book-lab", 
+    demo: null,
+    store: null,
+  },
+  highlights: [
+    'Create and manage books and authors with images',
+    'Favorite system for quick access to important items',
+    'Clean and modern UI with light & dark theme support',
+    'Offline-first app using local database',
+  ],
+  features: [
+    {
+      title: 'Book & Author Management',
+      description: 'Add, edit,delete, and store detailed information about books and authors including descriptions and images.',
+    },
+    {
+      title: 'Favorites System',
+      description: 'Mark books or authors as favorites for quick access and better organization.',
+    },
+    {
+      title: 'Image Upload',
+      description: 'Attach cover images or author photos stored locally on the device.',
+    },
+    {
+      title: 'Dark Mode',
+      description: 'Switch between light and dark themes for better user experience.',
+    },
+  ],
+  techStack: ['Flutter', 'Dart', 'SQLite', 'Provider'],
+  screenshots: [
+    '/portfolio/projects/book-lab/book_lab_1.png',
+    '/portfolio/projects/book-lab/book_lab_2.png',
+    '/portfolio/projects/book-lab/book_lab_3.png',
+    '/portfolio/projects/book-lab/book_lab_4.png',
+    '/portfolio/projects/book-lab/book_lab_5.png',
+    '/portfolio/projects/book-lab/book_lab_6.png',
+    '/portfolio/projects/book-lab/book_lab_7.png',
+    '/portfolio/projects/book-lab/book_lab_8.png'
+  ],
+}
+
+  
 ]
 
 export function getProjectById(id) {
