@@ -220,7 +220,7 @@ export const projects = [
   timeline: '2026',
   status: 'Completed',
   links: {
-    github: "https://github.com/soekhant01/book-lab", 
+    github: "https://github.com/soekhant01/BookLab", 
     demo: null,
     store: null,
   },
