@@ -55,7 +55,5 @@ Place screenshot images in `public/projects/<project-id>/`. Empty `screenshots` 
 ## Deploy
 
 Run `npm run build` and deploy the `dist/` folder to any static host (Vercel, Netlify, GitHub Pages, etc.).
-
 For client-side routing, configure your host to serve `index.html` for all routes (SPA fallback).
-
 The original HTML version is preserved as `index.legacy.html` for reference.
