@@ -259,6 +259,61 @@ export const projects = [
     '/portfolio/projects/book-lab/book_lab_7.png',
     '/portfolio/projects/book-lab/book_lab_8.png'
   ],
+},
+
+{
+  id: 'book-lab',
+  title: 'Book Lab',
+  coverImage: '/portfolio/projects/book-lab/book.png',
+  description:
+    'A modern book management app to organize books and authors, featuring favorites, local storage, and clean UI with light/dark themes.',
+  summary:
+    'Book Lab is a Flutter mobile application designed to help users manage their personal book collection and author records. Users can add books and authors, attach images, write descriptions, and mark favorites for quick access. The app uses a local database for offline-first functionality and includes a polished UI with dark mode support and smooth interactions.',
+  tags: ['Flutter', 'Dart', 'Local Database'],
+  thumbClass: 'from-[#6a11cb] to-[#ff3d6e]',
+  role: 'Mobile Developer',
+  timeline: '2026',
+  status: 'Completed',
+  links: {
+    github: "https://github.com/soekhant01/BookLab", 
+    demo: null,
+    store: null,
+  },
+  highlights: [
+    'Create and manage books and authors with images',
+    'Favorite system for quick access to important items',
+    'Clean and modern UI with light & dark theme support',
+    'Offline-first app using local database',
+  ],
+  features: [
+    {
+      title: 'Book & Author Management',
+      description: 'Add, edit,delete, and store detailed information about books and authors including descriptions and images.',
+    },
+    {
+      title: 'Favorites System',
+      description: 'Mark books or authors as favorites for quick access and better organization.',
+    },
+    {
+      title: 'Image Upload',
+      description: 'Attach cover images or author photos stored locally on the device.',
+    },
+    {
+      title: 'Dark Mode',
+      description: 'Switch between light and dark themes for better user experience.',
+    },
+  ],
+  techStack: ['Flutter', 'Dart', 'SQLite', 'Provider'],
+  screenshots: [
+    '/portfolio/projects/book-lab/book_lab_1.png',
+    '/portfolio/projects/book-lab/book_lab_2.png',
+    '/portfolio/projects/book-lab/book_lab_3.png',
+    '/portfolio/projects/book-lab/book_lab_4.png',
+    '/portfolio/projects/book-lab/book_lab_5.png',
+    '/portfolio/projects/book-lab/book_lab_6.png',
+    '/portfolio/projects/book-lab/book_lab_7.png',
+    '/portfolio/projects/book-lab/book_lab_8.png'
+  ],
 }
 
   
